@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_HyperCasualTemplate.1942939841.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="EventArgs" t="Include">
+            <e p="PlayButtonPressedArgs.cs" t="Include" />
+          </e>
+          <e p="GameController.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IMonoNotification.cs" t="Include" />
+            <e p="IObservable.cs" t="Include" />
+            <e p="IObserver.cs" t="Include" />
+            <e p="IState.cs" t="Include" />
+          </e>
+          <e p="StateController.cs" t="Include" />
+          <e p="States" t="Include">
+            <e p="Game" t="Include">
+              <e p="GameModel.cs" t="Include" />
+              <e p="GameView.cs" t="Include" />
+            </e>
+            <e p="MainMenu" t="Include">
+              <e p="MainMenuFactory.cs" t="Include" />
+              <e p="MainMenuModel.cs" t="Include" />
+              <e p="MainMenuState.cs" t="Include" />
+              <e p="MainMenuView.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="HyperCasualTemplate.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
