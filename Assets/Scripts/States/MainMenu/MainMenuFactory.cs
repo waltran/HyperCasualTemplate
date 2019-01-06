@@ -29,7 +29,7 @@ namespace Game.Core
 
         public MainMenuView CreateView()
         {
-            var prefab = Resources.Load<GameObject>("Prefabs/MainMenuView");
+            var prefab = Resources.Load<GameObject>("Prefabs/StateViews/MainMenuView");
             return Object.Instantiate(prefab).GetComponent<MainMenuView>();
         }
 

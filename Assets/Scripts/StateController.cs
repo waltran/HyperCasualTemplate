@@ -9,7 +9,9 @@ namespace Game.Core
         Game
     }
 
-    public class StateController : IMonoNotification, IObserver<PlayButtonPressedArgs>
+    public class StateController : IMonoNotification, IObserver<PlayButtonPressedArgs>,
+                                                      IObserver<HomeButtonPressedArgs>,
+                                                      IObserver<RestartButtonPressedArgs>
     {
         #region Fields
 
@@ -74,6 +76,12 @@ namespace Game.Core
                     (_activeState as IObservable<PlayButtonPressedArgs>).Attach(this);
                     break;
                 case StateType.Game:
+                    var gameModel = GameFactory.Instance.CreateModel();
+                    var gameView = GameFactory.Instance.CreateView();
+                    _activeState = GameFactory.Instance.CreateController(gameModel, gameView);
+
+                    (_activeState as IObservable<HomeButtonPressedArgs>).Attach(this);
+                    (_activeState as IObservable<RestartButtonPressedArgs>).Attach(this);
                     break;
             }
 
@@ -87,6 +95,16 @@ namespace Game.Core
         #region IObserver Interface
 
         void IObserver<PlayButtonPressedArgs>.OnNotified(object sender, PlayButtonPressedArgs eventArgs)
+        {
+            SwitchState(StateType.Game);
+        }
+
+        void IObserver<HomeButtonPressedArgs>.OnNotified(object sender, HomeButtonPressedArgs eventArgs)
+        {
+            SwitchState(StateType.MainMenu);
+        }
+
+        void IObserver<RestartButtonPressedArgs>.OnNotified(object sender, RestartButtonPressedArgs eventArgs)
         {
             SwitchState(StateType.Game);
         }
