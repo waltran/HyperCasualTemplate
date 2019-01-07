@@ -18,6 +18,20 @@ namespace Game.Core
 
         #endregion //Events
 
+        #region Public Methods
+
+        public void Init()
+        {
+            Debug.Log("GameModel::Initializing");
+        }
+
+        public void End()
+        {
+            Debug.Log("GameModel::End");
+        }
+
+        #endregion //Public Methods
+
         #region IMonoNotification Interface
 
         void IMonoNotification.FixedUpdate()
@@ -26,6 +40,8 @@ namespace Game.Core
 
         void IMonoNotification.Update()
         {
+            _score++;
+            OnScoreUpdated();
         }
 
         void IMonoNotification.LateUpdate()

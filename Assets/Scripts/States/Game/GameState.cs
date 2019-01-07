@@ -63,11 +63,13 @@ namespace Game.Core
         void IState.Begin()
         {
             SubscribeEvents();
+            _model.Init();
         }
 
         void IState.End()
         {
             UnsubscribeEvents();
+            _model.End();
             Object.DestroyImmediate(_view.gameObject);
             Object.DestroyImmediate(_model);
         }
